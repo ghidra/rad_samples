@@ -8,13 +8,18 @@
 <script type="text/javascript" language="Javascript">
 
 rad.includes.modules([
-	"panels"
+	"layout"
 ]);
 //COMPILE SOURCES
 rad.includes.source([]);
 
+layout_workspace=function(id){
+	this.layout = new rad.layout(id);//,rad.closure(this,this.windowresized)
+}
+
 window.onload=function(){
-    draft.init();
+    //draft.init();
+    layout_workspace("workspace");
 }
 
 </script>
